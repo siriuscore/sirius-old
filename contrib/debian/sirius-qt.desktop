@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Bitcoin Core
+Comment=Connect to the Sirius P2P Network
+Exec=sirius-qt %u
+Terminal=false
+Type=Application
+Icon=sirius128
+MimeType=x-scheme-handler/sirius;
+Categories=Office;Finance;

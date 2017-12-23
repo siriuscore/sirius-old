@@ -1,0 +1,6 @@
+usr/local/bin/sirius-qt usr/bin
+share/pixmaps/sirius32.xpm usr/share/pixmaps
+share/pixmaps/sirius16.xpm usr/share/pixmaps
+share/pixmaps/sirius128.png usr/share/pixmaps
+debian/sirius-qt.desktop usr/share/applications
+debian/sirius-qt.protocol usr/share/kde4/services/
