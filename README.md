@@ -29,7 +29,7 @@ How to compile
     # If you want to build the Qt GUI:
     sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
 
-    git clone https://github.com/siriusproject/sirius --recursive
+    git clone git://github.com/siriusproject/sirius
     cd sirius
 
     # Note autogen will prompt to install some more dependencies if needed
