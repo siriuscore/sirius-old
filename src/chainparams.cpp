@@ -136,7 +136,7 @@ public:
 		vSeeds.push_back(CDNSSeedData("159.89.47.201", "159.89.47.201", false)); // Sirius US node
 		vSeeds.push_back(CDNSSeedData("163.172.71.184", "163.172.71.184", false)); // Joseph Stuhlman
 		vSeeds.push_back(CDNSSeedData("173.82.15.7", "173.82.15.7", false)); // Biodragon
-		vSeeds.push_back(CDNSSeedData("94.130.15.169", "94.130.15.169", false)); // Community seed
+		vSeeds.push_back(CDNSSeedData("sirx.roelandp.nl", "sirx.roelandp.nl", false)); // Community seed (@roelandp)
 		vSeeds.push_back(CDNSSeedData("104.225.219.29", "104.225.219.29", false)); // Community seed
 		vSeeds.push_back(CDNSSeedData("93.104.209.17", "93.104.209.17", false)); // Community seed
 		vSeeds.push_back(CDNSSeedData("104.251.219.220", "104.251.219.220", false)); // Community seed
