@@ -1,0 +1,2 @@
+sirius/libbitcoin_server_a-siriustransaction.o: \
+ sirius/siriustransaction.cpp

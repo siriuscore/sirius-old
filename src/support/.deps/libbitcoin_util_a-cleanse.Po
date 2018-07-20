@@ -1,0 +1,100 @@
+support/libbitcoin_util_a-cleanse.o: support/cleanse.cpp \
+ support/cleanse.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/stdlib.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/cstdlib \
+ /usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+ /usr/share/mingw-w64/include/stdlib.h \
+ /usr/share/mingw-w64/include/crtdefs.h \
+ /usr/share/mingw-w64/include/_mingw.h \
+ /usr/share/mingw-w64/include/_mingw_mac.h \
+ /usr/share/mingw-w64/include/_mingw_secapi.h \
+ /usr/share/mingw-w64/include/vadefs.h \
+ /usr/share/mingw-w64/include/sdks/_mingw_directx.h \
+ /usr/share/mingw-w64/include/sdks/_mingw_ddk.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include-fixed/syslimits.h \
+ /usr/share/mingw-w64/include/limits.h \
+ /usr/share/mingw-w64/include/sec_api/stdlib_s.h \
+ /usr/share/mingw-w64/include/malloc.h \
+ /home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/crypto.h \
+ /home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/e_os2.h \
+ /home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/opensslconf.h \
+ /usr/share/mingw-w64/include/stdio.h \
+ /usr/share/mingw-w64/include/_mingw_print_push.h \
+ /usr/share/mingw-w64/include/_mingw_off_t.h \
+ /usr/x86_64-w64-mingw32/include/swprintf.inl \
+ /usr/share/mingw-w64/include/sec_api/stdio_s.h \
+ /usr/share/mingw-w64/include/_mingw_print_pop.h \
+ /home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/stack.h \
+ /home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/safestack.h \
+ /home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/opensslv.h \
+ /home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/ossl_typ.h \
+ /home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/symhacks.h
+
+support/cleanse.h:
+
+/usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/stdlib.h:
+
+/usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/cstdlib:
+
+/usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/x86_64-w64-mingw32/bits/c++config.h:
+
+/usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
+
+/usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
+
+/usr/share/mingw-w64/include/stdlib.h:
+
+/usr/share/mingw-w64/include/crtdefs.h:
+
+/usr/share/mingw-w64/include/_mingw.h:
+
+/usr/share/mingw-w64/include/_mingw_mac.h:
+
+/usr/share/mingw-w64/include/_mingw_secapi.h:
+
+/usr/share/mingw-w64/include/vadefs.h:
+
+/usr/share/mingw-w64/include/sdks/_mingw_directx.h:
+
+/usr/share/mingw-w64/include/sdks/_mingw_ddk.h:
+
+/usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include-fixed/limits.h:
+
+/usr/lib/gcc/x86_64-w64-mingw32/6.3-posix/include-fixed/syslimits.h:
+
+/usr/share/mingw-w64/include/limits.h:
+
+/usr/share/mingw-w64/include/sec_api/stdlib_s.h:
+
+/usr/share/mingw-w64/include/malloc.h:
+
+/home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/crypto.h:
+
+/home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/e_os2.h:
+
+/home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/opensslconf.h:
+
+/usr/share/mingw-w64/include/stdio.h:
+
+/usr/share/mingw-w64/include/_mingw_print_push.h:
+
+/usr/share/mingw-w64/include/_mingw_off_t.h:
+
+/usr/x86_64-w64-mingw32/include/swprintf.inl:
+
+/usr/share/mingw-w64/include/sec_api/stdio_s.h:
+
+/usr/share/mingw-w64/include/_mingw_print_pop.h:
+
+/home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/stack.h:
+
+/home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/safestack.h:
+
+/home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/opensslv.h:
+
+/home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/ossl_typ.h:
+
+/home/compilex/sirius-0.5/depends/x86_64-w64-mingw32/share/../include/openssl/symhacks.h:
