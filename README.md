@@ -9,7 +9,8 @@ Sirius is a new smart contract platform that offers the same anonymity guarantee
 Communication
 -------------
 The Sirius slack can be found at: https://sirx.slack.com
-
+Join telegram at: https://telegram.getsirius.io
+Or come talk to us on discord: https://discord.getsirius.io
 
 Building Sirius Core
 ----------
