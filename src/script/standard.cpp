@@ -9,7 +9,6 @@
 #include "script/script.h"
 #include "util.h"
 #include "utilstrencodings.h"
-
 #include <sirius/siriusstate.h>
 #include <sirius/siriustransaction.h>
 #include <validation.h>
@@ -20,6 +19,10 @@ bool fAcceptDatacarrier = DEFAULT_ACCEPT_DATACARRIER;
 unsigned nMaxDatacarrierBytes = MAX_OP_RETURN_RELAY;
 
 CScriptID::CScriptID(const CScript& in) : uint160(Hash160(in.begin(), in.end())) {}
+
+valtype DataVisitor::operator()(const CNoDestination& noDest) const { return valtype(); }
+valtype DataVisitor::operator()(const CKeyID& keyID) const { return valtype(keyID.begin(), keyID.end()); }
+valtype DataVisitor::operator()(const CScriptID& scriptID) const { return valtype(scriptID.begin(), scriptID.end()); }
 
 const char* GetTxnOutputType(txnouttype t)
 {
@@ -267,6 +270,23 @@ bool Solver(const CScript& scriptPubKey, txnouttype& typeRet, std::vector<std::v
     return false;
 }
 
+#include "base58.h"
+
+bool ExtractDestination(const COutPoint out, const CScript& script, CTxDestination& addressRet, txnouttype* typeRet) {
+    if (!typeRet) {
+        txnouttype type;
+        typeRet = &type;
+    }
+    if (ExtractDestination(script, addressRet, typeRet))
+        return true;
+    if (*typeRet == TX_CREATE) {
+        addressRet = CKeyID(uint160(SiriusState::createSiriusAddress(uintToh256(out.hash), out.n).asBytes()));
+        // std::cout << CBitcoinAddress(addressRet).ToString()<< " " << out.hash.GetHex() << " " << out.n << std::endl;
+        return true;
+    }
+    return false;
+}
+
 bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet, txnouttype *typeRet)
 {
     std::vector<valtype> vSolutions;
@@ -297,6 +317,22 @@ bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet,
         addressRet = CScriptID(uint160(vSolutions[0]));
         return true;
     }
+    /////////////////////////////////////////////////////////////// // sirius
+    else if(whichType == TX_CALL){
+        addressRet = CKeyID(uint160(vSolutions[0]));
+        return true;
+    }
+    else if(whichType == TX_WITNESS_V0_KEYHASH)
+    {
+        addressRet = CKeyID(uint160(vSolutions[0]));
+        return true;
+    }
+    else if(whichType == TX_WITNESS_V0_SCRIPTHASH)
+    {
+        addressRet = CScriptID(Hash160(vSolutions[0]));
+        return true;
+    }
+    ///////////////////////////////////////////////////////////////
     // Multisig txns have more than one address...
     return false;
 }

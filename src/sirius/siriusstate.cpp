@@ -1,8 +1,8 @@
 #include <sstream>
 #include <util.h>
 #include <validation.h>
-#include "chainparams.h"
-#include "siriusstate.h"
+#include <chainparams.h>
+#include <sirius/siriusstate.h>
 
 using namespace std;
 using namespace dev;
@@ -90,9 +90,10 @@ ResultExecute SiriusState::execute(EnvInfo const& _envInfo, SealEngineFace const
         printfErrorLog(dev::eth::toTransactionException(_e));
         res.excepted = dev::eth::toTransactionException(_e);
         res.gasUsed = _t.gas();
-        const Consensus::Params& consensusParams = Params().GetConsensus();
+        //const Consensus::Params& consensusParams = Params().GetConsensus();
         /*if(chainActive.Height() < consensusParams.nFixUTXOCacheHFHeight  && _p != Permanence::Reverted){*/
-if(_p != Permanence::Reverted){
+        //if((_envInfo.number() - 1) < consensusParams.nFixUTXOCacheHFHeight  && _p != Permanence::Reverted){
+        if(_p != Permanence::Reverted){
             deleteAccounts(_sealEngine.deleteAddresses);
             commit(CommitBehaviour::RemoveEmptyAccounts);
         } else {
@@ -227,7 +228,7 @@ void SiriusState::addBalance(dev::Address const& _id, dev::u256 const& _amount)
         m_changeLog.emplace_back(dev::eth::detail::Change::Balance, _id, _amount);
 }
 
-dev::Address SiriusState::createSiriusAddress(dev::h256 hashTx, uint32_t voutNumber){
+const dev::Address SiriusState::createSiriusAddress(dev::h256 hashTx, uint32_t voutNumber){
     uint256 hashTXid(h256Touint(hashTx));
 	std::vector<unsigned char> txIdAndVout(hashTXid.begin(), hashTXid.end());
 	std::vector<unsigned char> voutNumberChrs;
