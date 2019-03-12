@@ -4,7 +4,7 @@ https://getsirius.io
 
 What is Sirius?
 -------------
-Sirius is a new smart contract platform that offers the same anonymity guarantees as Bitcoin by virtue of its UTXO model. To encourage developer participation, Sirius is distributed for free among developers and blockchain enthusiasts. Among its consensus-building features are decentralized governance, enabling fast adaptation of blockchain parameters to changing conditions, and the Mutualized Proof-of-Stake algorithm. To encourage adoption, Sirius will feature a smart contract wizard. This feature will enable bets, lotteries and token crowdsales to be easily organised. This can be done even with no programming experience, finally putting the power of smart contracts in the hands of users, not just coders.
+Sirius is a smart contract platform based on Bitcoin. To encourage developer participation, Sirius is distributed for free among developers and blockchain enthusiasts. The technical white paper describing its new Reputation-Weighted Proof-of-Stake (RWPoS) algorithm will soon be released, which will boost transaction speed to a maximum of 11000 TPS with a minimized degradation of decentralization and make 51% attacks infeasible.
 
 Communication
 -------------
